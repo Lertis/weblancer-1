@@ -1,0 +1,77 @@
+@import '../../../assets/styles/variables.scss';
+
+.company-item {
+  background: $secondary-backgound;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 762px;
+  max-height: 76px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 20px 50px;
+  &__description {
+    &__name {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: -0.022em;
+      color: $main-text-color;
+    }
+
+    &__subname {
+      display: flex;
+      align-items: center;
+      color: rgba($main-text-color, 0.7);
+    }
+  }
+}
+
+.single-button-template {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin: 9px;
+}
+
+.multi-button-template {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  &__counter-area,
+  &__action-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    &__item-count {
+      width: 38px;
+      height: 35px;
+      background: white;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      display: grid;
+      place-items: center;
+    }
+
+    &__increment,
+    &__decrement {
+      width: 38px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      color: white;
+    }
+
+    &__action {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 9px 26px;
+    }
+  }
+}

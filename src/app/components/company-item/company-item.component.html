@@ -1,0 +1,29 @@
+<div class="company-item">
+  <div class="company-item__description">
+    <div class="company-item__description__name">{{ name }}</div>
+    <div class="company-item__description__subname text-small">{{ subname }}</div>
+  </div>
+  <div class="action-content">
+    <ng-container
+    *ngIf="booleanValue; then singleTmp; else multiTmp">
+  </ng-container>
+
+  <ng-template #singleTmp>
+    <weblancer-button><div class="single-button-template text-regular">Add ticket</div></weblancer-button>
+  </ng-template>
+  <ng-template #multiTmp>
+    <div class="multi-button-template">
+      <div class="multi-button-template__counter-area">
+        <weblancer-button><div class="multi-button-template__counter-area__decrement text-large">-</div></weblancer-button>
+        <div class="multi-button-template__counter-area__item-count">1</div>
+        <weblancer-button><div class="multi-button-template__counter-area__increment text-large">+</div></weblancer-button>
+      </div>
+
+      <div class="multi-button-template__action-buttons">
+        <weblancer-button [disabled]="true"><div class="multi-button-template__action-buttons__action text-regular">Date</div></weblancer-button>
+        <weblancer-button><div class="multi-button-template__action-buttons__action text-regular">Price</div></weblancer-button>
+      </div>
+    </div>
+  </ng-template>
+  </div>
+</div>

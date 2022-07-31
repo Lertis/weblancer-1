@@ -1,0 +1,38 @@
+@import '../../../assets/styles/variables.scss';
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+
+  &__top-action-buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    &__btn {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 9px 40px;
+    }
+  }
+
+  &__search {
+    margin: 57px 0 20px;
+  }
+
+  &__search-result {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__paginator {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,51 @@
+@import '../../../assets/styles/variables.scss';
+
+@mixin flex($row, $gap) {
+  display: flex;
+  gap: $gap;
+  @if $row {
+    flex-direction: row;
+  } @else {
+    flex-direction: column;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background: $secondary-backgound;
+  border-top: 1px solid $border-color;
+  padding: 47px 0 92px 0;
+
+  &__main-info,
+  &__portfolio-info,
+  &__sectors-info,
+  &__social-media-info {
+    @include flex(false, 23px);
+
+    &__section-title {
+      color: $main-text-color;
+    }
+
+    @mixin defaul-link-refs() {
+      &__icon {
+        cursor: pointer;
+      }
+
+      & > a {
+        text-decoration: none;
+        color: $link-text-color;
+      }
+    }
+
+    &__link-refs-column {
+      @include flex(false, 20px);
+      @include defaul-link-refs();
+    }
+
+    &__link-refs-row {
+      @include flex(true, 20px);
+      @include defaul-link-refs();
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="main-container">
+  <div>
+    <div class="main-container__top-action-buttons">
+      <weblancer-button [disabled]="true"><div class="main-container__top-action-buttons__btn">Back</div></weblancer-button>
+      <weblancer-button [transparent]="true"><div class="main-container__top-action-buttons__btn">Import File</div></weblancer-button>
+      <weblancer-button><div class="main-container__top-action-buttons__btn">Save</div></weblancer-button>
+    </div>
+    <div class="main-container__search">
+      <weblancer-search-input></weblancer-search-input>
+    </div>
+
+    <div class="main-container__search-result">
+      <ng-container *ngFor="let item of items">
+        <weblancer-company-item [name]="item.name" [subname]="item.subname" [booleanValue]="item.booleanValue">
+        </weblancer-company-item>
+      </ng-container>
+    </div>
+
+    <div class="main-container__paginator">
+      <weblancer-paginator></weblancer-paginator>
+    </div>
+  </div>
+</div>

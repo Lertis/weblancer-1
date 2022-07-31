@@ -1,0 +1,27 @@
+$paginator-item-color: #4A3F3F;
+
+.paginator-list {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+
+  @mixin default-paginator-item() {
+    text-align: center;
+    padding: 2px 9px;
+  }
+
+  &__active {
+    @include default-paginator-item();
+    color: white;
+  }
+
+  &__inactive {
+    @include default-paginator-item();
+    color: $paginator-item-color;
+  }
+
+  &__switcher {
+    @include default-paginator-item();
+    color: $paginator-item-color;
+  }
+}

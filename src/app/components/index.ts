@@ -1,0 +1,6 @@
+export * from './button/button.component'
+export * from './company-item/company-item.component'
+export * from './footer/footer.component'
+export * from './main/main.component'
+export * from './paginator/paginator.component'
+export * from './search-input/search-input.component'
